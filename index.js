@@ -18,3 +18,4 @@ console.log(links); // <== HTMLCollection [a#google-link.link, google-link: a#go
 let link = document.querySelector('a'); 
 
 link.setAttribute('href', 'http://www.google.com');                    
+link.setAttribute('target', '_blank');
