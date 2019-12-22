@@ -19,3 +19,7 @@ let link = document.querySelector('a');
 
 link.setAttribute('href', 'http://www.google.com');                    
 link.setAttribute('target', '_blank');
+
+
+paragraph.removeAttribute('id');
+paragraph.setAttribute('class', 'paragraph');
