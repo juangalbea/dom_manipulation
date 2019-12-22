@@ -23,3 +23,28 @@ link.setAttribute('target', '_blank');
 
 paragraph.removeAttribute('id');
 paragraph.setAttribute('class', 'paragraph');
+paragraph.removeAttribute('class');
+
+let h2Tag = document.createElement('h2');
+console.log(h2Tag); // <== <h2></h2>
+h2Tag.innerHTML = "Elephant";
+let parent = document.getElementsByTagName('body')[0];
+parent.appendChild(h2Tag);
+
+let text = document.createTextNode('This text is created dynamically 🏆 🎯');
+parent.appendChild(text);
+
+let text2 = document.createTextNode('Hi there! I am using JavaScript');
+let p2 = document.createElement('p');
+p2.appendChild(text2);
+console.log(p2);
+parent.appendChild(p2);
+
+let h1Tag = document.createElement('h1');
+h1Tag.innerHTML = "Heading 1 - comes before Heading 2";
+parent.insertBefore(h1Tag, h2Tag);
+
+let input1 = document.createElement('input');
+let button1 = document.getElementById('add-item-button');
+parent.insertBefore(input1, button1)
+
