@@ -52,3 +52,10 @@ let theParagraph = document.getElementById("paragraph");
 parent.removeChild(theParagraph);
 
 parent.removeChild(h2Tag);
+
+let contentDiv = document.getElementById('content');
+contentDiv.innerHTML = ""; // clears the whole element
+
+let superList = document.getElementsByClassName('super-list')[0];
+console.log(superList);
+superList.innerHTML = "";
