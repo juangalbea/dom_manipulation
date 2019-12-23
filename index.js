@@ -61,8 +61,6 @@ console.log(superList);
 superList.innerHTML = "";
 
 
-
-
 let i = 1;
 let button = document.getElementById("add-item-button");
 let itemList = document.getElementById('items-list');
@@ -70,3 +68,23 @@ button.onclick = function(){
   document.getElementsByTagName("li");
   itemList.innerHTML += '<li>Item number ' + i++ + '</li>'
 }
+
+
+
+let sendButton = document.getElementById('send-btn');
+// move the input inside the function (this step is optional):
+sendButton.onclick = function(){
+  let input = document.getElementsByTagName('input')[1]; // or leave it as it is, outside
+  console.log(input.value);
+}
+
+let theUl = document.querySelector('.list'); // gets the "ul" element
+
+console.log(theUl.childNodes); // ==> check what's in the console
+
+theUl.childNodes.forEach(theLiTag => {
+    theLiTag.onclick = function(){
+        theUl.removeChild(theLiTag);
+
+    }
+})
