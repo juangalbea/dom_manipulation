@@ -59,3 +59,14 @@ contentDiv.innerHTML = ""; // clears the whole element
 let superList = document.getElementsByClassName('super-list')[0];
 console.log(superList);
 superList.innerHTML = "";
+
+
+
+
+let i = 1;
+let button = document.getElementById("add-item-button");
+let itemList = document.getElementById('items-list');
+button.onclick = function(){
+  document.getElementsByTagName("li");
+  itemList.innerHTML += '<li>Item number ' + i++ + '</li>'
+}
