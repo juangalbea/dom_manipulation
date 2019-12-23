@@ -21,9 +21,9 @@ link.setAttribute('href', 'http://www.google.com');
 link.setAttribute('target', '_blank');
 
 
-paragraph.removeAttribute('id');
-paragraph.setAttribute('class', 'paragraph');
-paragraph.removeAttribute('class');
+// paragraph.removeAttribute('id');
+// paragraph.setAttribute('class', 'paragraph');
+// paragraph.removeAttribute('class');
 
 let h2Tag = document.createElement('h2');
 console.log(h2Tag); // <== <h2></h2>
@@ -48,3 +48,7 @@ let input1 = document.createElement('input');
 let button1 = document.getElementById('add-item-button');
 parent.insertBefore(input1, button1)
 
+let theParagraph = document.getElementById("paragraph");
+parent.removeChild(theParagraph);
+
+parent.removeChild(h2Tag);
